@@ -58,7 +58,7 @@ export default function Home() {
             textTransform: 'uppercase',
             color: '#888',
           }}>
-            Topic of Study: Deep Learning
+            Topic of Study: Electronics
           </p>
         </div>
 
@@ -72,9 +72,9 @@ export default function Home() {
           fontStyle: 'italic',
           letterSpacing: '0.03em',
         }}>
-          &ldquo;Intelligence is usually easy to tell in a 10-minute conversation. Determination is harder&rdquo;
+          &ldquo;What stands in the way becomes the way&rdquo;
           <footer style={{ marginTop: '0.75rem', fontSize: '0.7rem', fontStyle: 'normal', letterSpacing: '0.1em', color: '#666', textTransform: 'uppercase' }}>
-            — Sam Altman, CEO of OpenAI
+            — Marcus Aurelius
           </footer>
         </blockquote>
       </section>

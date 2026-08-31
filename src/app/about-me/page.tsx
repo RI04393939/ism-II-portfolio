@@ -19,13 +19,23 @@ export default function AboutMe() {
         {/* Bio */}
         <div className="content-card reveal">
           <p className="page-subheading">Biography</p>
+          <p style={{ color: '#aaa', lineHeight: 1.8, fontSize: '0.9rem', marginBottom: '1rem' }}>
+            Rithvik Inampudi is a student in the Independent Study and Mentorship program, where his
+            topic of study is electronics. His interest sits where hardware meets intelligence — the
+            circuits, boards, and chips that machine learning models actually run on — and in how a
+            firmer grasp of that layer changes what those models are capable of.
+          </p>
+          <p style={{ color: '#aaa', lineHeight: 1.8, fontSize: '0.9rem', marginBottom: '1rem' }}>
+            Alongside electronics he works in artificial intelligence and deep learning, building on a
+            foundation in mathematics and computer science. He is drawn to applying neural networks to
+            complex, real-world challenges rather than to benchmarks alone, and through ISM he is
+            deepening that work through research, mentorship, and an original project.
+          </p>
           <p style={{ color: '#aaa', lineHeight: 1.8, fontSize: '0.9rem' }}>
-            Rithvik Inampudi is a student passionate about artificial intelligence and deep learning.
-            With a strong foundation in mathematics and computer science, he is dedicated to exploring
-            how neural networks and machine learning models can be applied to solve complex, real-world
-            challenges. Through the ISM program, Rithvik is actively deepening his expertise in deep
-            learning research and development, with a long-term goal of building intelligent systems
-            that create meaningful impact.
+            He takes his approach from Marcus Aurelius — &ldquo;What stands in the way becomes the
+            way.&rdquo; An obstacle in a design or a model is treated as the substance of the work
+            rather than a detour around it. The long-term goal is to build intelligent systems that
+            make a practical, measurable difference in people&apos;s lives.
           </p>
         </div>
       </div>
