@@ -8,7 +8,9 @@ const routes = [
   { label: 'HOME', href: '/' },
   { label: 'ABOUT ME', href: '/about-me' },
   { label: 'ABOUT ISM', href: '/about-ism' },
+  { label: 'MENTOR BIO', href: '/mentor-bio' },
   { label: 'RESEARCH', href: '/research' },
+  { label: 'BLOG', href: '/blog' },
   { label: 'PROJECTS', href: '/projects' },
 ];
 
