@@ -1,10 +1,13 @@
+import PhotoCard from '@/components/PhotoCard/PhotoCard';
+import { researchAssessments } from '@/data/research';
+
 export default function Research() {
   return (
     <main className="page-container">
       <h1 className="page-heading reveal">Research</h1>
 
       {/* Primary Sources */}
-      <div className="reveal">
+      <div className="reveal" style={{ marginBottom: '2.5rem' }}>
         <p className="page-subheading">Primary Sources</p>
 
         <div className="content-card" style={{ marginBottom: '1rem' }}>
@@ -62,6 +65,35 @@ export default function Research() {
             ))}
           </div>
         </div>
+      </div>
+
+      {/* Secondary Sources */}
+      <div className="reveal">
+        <p className="page-subheading">Secondary Sources</p>
+
+        {researchAssessments.length === 0 ? (
+          <div className="placeholder-box" style={{ minHeight: '220px', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', gap: '0.75rem', marginBottom: 0 }}>
+            <span style={{ fontSize: '2rem', opacity: 0.2 }}>◈</span>
+            <p style={{ fontSize: '0.8rem', letterSpacing: '0.1em' }}>No assessments yet</p>
+            <p style={{ fontSize: '0.65rem', opacity: 0.5, textTransform: 'none', letterSpacing: '0.05em', maxWidth: '340px', textAlign: 'center', lineHeight: 1.7 }}>
+              Research assessments will appear here, ordered newest to oldest.
+            </p>
+          </div>
+        ) : (
+          <div className="card-grid">
+            {researchAssessments.map((item, i) => (
+              <PhotoCard
+                key={item.slug}
+                href={`/research/${item.slug}`}
+                src={item.image}
+                alt={item.title}
+                label={item.label}
+                title={item.title}
+                priority={i < 3}
+              />
+            ))}
+          </div>
+        )}
       </div>
     </main>
   );
