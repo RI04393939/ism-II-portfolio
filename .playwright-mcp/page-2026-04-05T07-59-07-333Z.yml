@@ -1,0 +1,247 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]: RI
+  - generic [ref=e7]:
+    - heading "Rithvik" [level=3] [ref=e9]
+    - navigation [ref=e10]:
+      - heading "home" [level=3] [ref=e13]
+      - heading "about" [level=3] [ref=e16]
+      - heading "projects" [level=3] [ref=e19]
+      - heading "experience" [level=3] [ref=e22]
+      - heading "achievements" [level=3] [ref=e25]
+      - heading "skills" [level=3] [ref=e28]
+      - heading "extracurriculars" [level=3] [ref=e31]
+  - generic [ref=e32]:
+    - generic [ref=e34]:
+      - generic:
+        - generic: SYS
+        - generic: //
+        - generic: rinampudi.github.io
+        - generic: //
+        - generic: PORTFOLIO_v1.0
+        - generic: //
+        - generic: 02:59:07
+      - generic:
+        - generic: ONLINE
+        - generic: //
+        - generic: RITHVIK INAMPUDI
+        - generic: //
+        - generic: HS STUDENT
+      - generic [ref=e38]: RI
+      - generic [ref=e39]:
+        - generic [ref=e40]: Open to opportunities
+        - paragraph [ref=e42]: Hello, I'm
+        - heading "Rithvik Inampudi" [level=2] [ref=e43]:
+          - text: Rithvik
+          - generic [ref=e44]: Inampudi
+        - generic [ref=e45]:
+          - generic [ref=e46]: AI
+          - generic [ref=e48]: Computer Science
+          - generic [ref=e50]: Building Cool Stuff
+        - paragraph [ref=e51]:
+          - generic [ref=e52]: "|"
+        - generic [ref=e53]:
+          - link "GitHub" [ref=e54]:
+            - /url: https://github.com/YOUR_USERNAME
+            - img "GitHub" [ref=e55]
+          - link "LinkedIn" [ref=e56]:
+            - /url: https://linkedin.com/in/YOUR_USERNAME
+            - img "LinkedIn" [ref=e57]
+          - link "Resume" [ref=e58]:
+            - /url: /assets/resume.pdf
+      - img "Scroll down" [ref=e59]
+    - generic [ref=e61]:
+      - heading "01 About Me 01" [level=1] [ref=e62]
+      - generic [ref=e63]:
+        - generic [ref=e64]:
+          - paragraph [ref=e65]: I'm a high school student passionate about artificial intelligence, computer science, and building software that makes a real difference. I'm currently in [Your Grade] at [Your School], where I'm exploring the intersection of math, programming, and creativity.
+          - paragraph [ref=e66]: My interests span machine learning, web development, and algorithm design. I love taking ideas from concept to working projects — whether that's a classifier, a web app, or a competition solution.
+          - paragraph [ref=e67]: I'm actively looking for opportunities to grow — through internships, research, hackathons, and collaborations with people working on real-world problems.
+        - generic [ref=e68]:
+          - generic [ref=e69]: Technical Proficiency
+          - generic [ref=e70]:
+            - generic [ref=e72]:
+              - generic [ref=e73]: Python
+              - generic [ref=e74]: 0%
+            - generic [ref=e78]:
+              - generic [ref=e79]: JavaScript / TypeScript
+              - generic [ref=e80]: 0%
+            - generic [ref=e84]:
+              - generic [ref=e85]: Machine Learning
+              - generic [ref=e86]: 0%
+            - generic [ref=e90]:
+              - generic [ref=e91]: Java / C++
+              - generic [ref=e92]: 0%
+            - generic [ref=e96]:
+              - generic [ref=e97]: Web Development
+              - generic [ref=e98]: 0%
+          - generic [ref=e101]:
+            - generic [ref=e102]:
+              - generic [ref=e103]: "[Grade]"
+              - generic [ref=e104]: Grade Level
+            - generic [ref=e105]:
+              - generic [ref=e106]: 3+
+              - generic [ref=e107]: Projects Built
+            - generic [ref=e108]:
+              - generic [ref=e109]: 2+
+              - generic [ref=e110]: Yrs Coding
+      - generic [ref=e112]:
+        - generic [ref=e113]: AI
+        - generic [ref=e114]: Python
+        - generic [ref=e115]: JavaScript
+        - generic [ref=e116]: React
+        - generic [ref=e117]: Machine Learning
+        - generic [ref=e118]: Next.js
+        - generic [ref=e119]: Data Structures
+        - generic [ref=e120]: Algorithms
+        - generic [ref=e121]: Web Development
+        - generic [ref=e122]: Java
+        - generic [ref=e123]: C++
+        - generic [ref=e124]: Git
+        - generic [ref=e125]: AI
+        - generic [ref=e126]: Python
+        - generic [ref=e127]: JavaScript
+        - generic [ref=e128]: React
+        - generic [ref=e129]: Machine Learning
+        - generic [ref=e130]: Next.js
+        - generic [ref=e131]: Data Structures
+        - generic [ref=e132]: Algorithms
+        - generic [ref=e133]: Web Development
+        - generic [ref=e134]: Java
+        - generic [ref=e135]: C++
+        - generic [ref=e136]: Git
+    - generic [ref=e138]:
+      - heading "02 Projects (click for more info) 02" [level=1] [ref=e139]
+      - generic [ref=e140]:
+        - generic [ref=e141]:
+          - img "Project One" [ref=e143]
+          - generic [ref=e144]:
+            - heading "Project One" [level=3] [ref=e145]
+            - paragraph [ref=e146]: A placeholder for your first project. Describe what problem it solves, what you built, and what tools you used.
+            - generic [ref=e147]:
+              - generic [ref=e148]: Python
+              - generic [ref=e149]: Machine Learning
+        - generic [ref=e150]:
+          - img "Project Two" [ref=e152]
+          - generic [ref=e153]:
+            - heading "Project Two" [level=3] [ref=e154]
+            - paragraph [ref=e155]: A placeholder for your second project. Add a short description of the technologies and outcome here.
+            - generic [ref=e156]:
+              - generic [ref=e157]: JavaScript
+              - generic [ref=e158]: React
+        - generic [ref=e159]:
+          - img "Project Three" [ref=e161]
+          - generic [ref=e162]:
+            - heading "Project Three" [level=3] [ref=e163]
+            - paragraph [ref=e164]: A placeholder for your third project. Replace this with details about what you built and why.
+            - generic [ref=e165]:
+              - generic [ref=e166]: Java
+              - generic [ref=e167]: Algorithms
+        - button "Show More Arrow" [ref=e168]:
+          - text: Show More
+          - img "Arrow" [ref=e169]
+    - generic [ref=e171]:
+      - heading "03 Experience 03" [level=1] [ref=e172]
+      - generic [ref=e173]:
+        - generic [ref=e174]:
+          - generic [ref=e176]: O
+          - generic [ref=e177]:
+            - heading "Role / Position @Organization Name now" [level=3] [ref=e178]:
+              - text: Role / Position
+              - generic [ref=e179]: "@Organization Name"
+              - generic [ref=e180]: now
+            - generic [ref=e182]: Month Year – Present
+            - paragraph [ref=e183]: "Placeholder: describe what you did, what you learned, and the impact you made."
+            - generic [ref=e184]:
+              - generic [ref=e185]: Skill A
+              - generic [ref=e186]: Skill B
+        - generic [ref=e187]:
+          - generic [ref=e189]: A
+          - generic [ref=e190]:
+            - heading "Another Role @Another Organization" [level=3] [ref=e191]:
+              - text: Another Role
+              - generic [ref=e192]: "@Another Organization"
+            - generic [ref=e193]: Month Year – Month Year
+            - paragraph [ref=e194]: "Placeholder: add internship, research, club leadership, or other experience here."
+            - generic [ref=e195]:
+              - generic [ref=e196]: Skill C
+              - generic [ref=e197]: Skill D
+    - generic [ref=e199]:
+      - heading "04 Achievements 04" [level=1] [ref=e200]
+      - generic [ref=e201]:
+        - generic [ref=e202]:
+          - generic [ref=e203]: "2024"
+          - heading "Achievement Placeholder" [level=3] [ref=e204]
+          - paragraph [ref=e205]: Add an award, competition placement, certification, or other notable achievement.
+        - generic [ref=e206]:
+          - generic [ref=e207]: "2023"
+          - heading "Another Achievement" [level=3] [ref=e208]
+          - paragraph [ref=e209]: Add another award, AP exam score, hackathon win, or published work.
+    - generic [ref=e211]:
+      - heading "05 Skills 05" [level=1] [ref=e212]
+      - generic [ref=e213]:
+        - generic [ref=e214]:
+          - generic [ref=e215]: Languages
+          - generic [ref=e216]:
+            - generic [ref=e217]: Python
+            - generic [ref=e218]: JavaScript
+            - generic [ref=e219]: TypeScript
+            - generic [ref=e220]: Java
+            - generic [ref=e221]: C++
+            - generic [ref=e222]: HTML
+            - generic [ref=e223]: CSS
+        - generic [ref=e224]:
+          - generic [ref=e225]: Tools
+          - generic [ref=e226]:
+            - generic [ref=e227]: React
+            - generic [ref=e228]: Next.js
+            - generic [ref=e229]: Git
+            - generic [ref=e230]: GitHub
+            - generic [ref=e231]: VS Code
+        - generic [ref=e232]:
+          - generic [ref=e233]: Concepts
+          - generic [ref=e234]:
+            - generic [ref=e235]: Machine Learning
+            - generic [ref=e236]: Data Structures
+            - generic [ref=e237]: Algorithms
+            - generic [ref=e238]: Web Development
+    - generic [ref=e240]:
+      - heading "06 Extracurriculars 06" [level=1] [ref=e241]
+      - generic [ref=e242]:
+        - generic [ref=e243]:
+          - generic [ref=e245]: S
+          - generic [ref=e246]:
+            - generic [ref=e247]:
+              - heading "Club / Activity" [level=3] [ref=e248]
+              - generic [ref=e249]: School / Organization
+            - generic [ref=e250]: Year – Present
+            - paragraph [ref=e251]: "Placeholder: describe your role, what the club does, and what you contributed."
+        - generic [ref=e252]:
+          - generic [ref=e254]: A
+          - generic [ref=e255]:
+            - generic [ref=e256]:
+              - heading "Another Activity" [level=3] [ref=e257]
+              - generic [ref=e258]: Another Org
+            - generic [ref=e259]: Year – Year
+            - paragraph [ref=e260]: "Placeholder: robotics, debate, hackathons, volunteering, research — anything relevant."
+    - contentinfo [ref=e261]:
+      - generic [ref=e263]:
+        - generic [ref=e264]:
+          - generic [ref=e265]: Rithvik Inampudi
+          - generic [ref=e266]: AI · Computer Science · Building Cool Stuff
+        - generic [ref=e267]:
+          - link "GitHub" [ref=e268]:
+            - /url: https://github.com/YOUR_USERNAME
+          - link "LinkedIn" [ref=e269]:
+            - /url: https://linkedin.com/in/YOUR_USERNAME
+      - generic [ref=e271]: © 2026 Rithvik Inampudi — Built with Next.js
+  - button "Scroll to top" [ref=e272]: ↑
+  - generic: 00 / HOME
+  - navigation [ref=e273]:
+    - button "Go to home" [ref=e274]
+    - button "Go to about" [ref=e275]
+    - button "Go to projects" [ref=e276]
+    - button "Go to experience" [ref=e277]
+    - button "Go to achievements" [ref=e278]
+    - button "Go to skills" [ref=e279]
+    - button "Go to extracurriculars" [ref=e280]
+  - alert [ref=e281]
