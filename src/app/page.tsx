@@ -1,81 +1,46 @@
-import Image from 'next/image';
-
 export default function Home() {
   return (
     <main style={{ position: 'relative', zIndex: 1 }}>
-      {/* Background image */}
-      <div style={{ position: 'fixed', inset: 0, zIndex: -1, overflow: 'hidden' }}>
-        <Image
-          src="/dl-bg.jpeg"
-          alt="Deep learning background"
-          fill
-          style={{ objectFit: 'cover', opacity: 0.38 }}
-          priority
-        />
-      </div>
+      {/* Corner subheading, replaces the old inline hero label */}
+      <p className="corner-label">ISM Digital Portfolio</p>
+
       <section style={{
         minHeight: '100vh',
         display: 'flex',
         flexDirection: 'column',
         justifyContent: 'center',
-        alignItems: 'flex-start',
-        padding: '0 2rem',
-        maxWidth: '900px',
+        alignItems: 'center',
+        textAlign: 'center',
+        padding: '0 1.5rem',
         margin: '0 auto',
       }}>
-        <p style={{
-          fontSize: '0.65rem',
-          letterSpacing: '0.2em',
-          textTransform: 'uppercase',
-          color: 'var(--accent)',
-          opacity: 0.7,
-          marginBottom: '1rem',
-        }}>
-          ISM Digital Portfolio
-        </p>
-
         <h1 style={{
-          fontSize: 'clamp(3rem, 8vw, 6rem)',
+          fontSize: 'clamp(1.6rem, 8.2vw, 6.5rem)',
           fontWeight: 700,
           letterSpacing: '-0.03em',
           lineHeight: 1.05,
-          marginBottom: '1rem',
+          marginBottom: '1.25rem',
           color: '#ffffff',
+          whiteSpace: 'nowrap',
         }}>
-          Rithvik<br />Inampudi
+          Rithvik Inampudi
         </h1>
 
         <div style={{
           display: 'flex',
           alignItems: 'center',
+          justifyContent: 'center',
           gap: '0.75rem',
-          marginBottom: '2.5rem',
+          marginBottom: '2.75rem',
         }}>
           <div style={{ width: 32, height: 1, background: 'var(--accent)', opacity: 0.5 }} />
-          <p style={{
-            fontSize: '0.8rem',
-            letterSpacing: '0.15em',
-            textTransform: 'uppercase',
-            color: '#888',
-          }}>
-            Topic of Study: Electronics
-          </p>
+          <p className="topic-sweep">Topic of Study: Electronics</p>
+          <div style={{ width: 32, height: 1, background: 'var(--accent)', opacity: 0.5 }} />
         </div>
 
-        <blockquote style={{
-          maxWidth: '520px',
-          borderLeft: '2px solid rgba(96, 165, 250, 0.3)',
-          paddingLeft: '1.25rem',
-          color: '#999',
-          fontSize: '0.85rem',
-          lineHeight: 1.7,
-          fontStyle: 'italic',
-          letterSpacing: '0.03em',
-        }}>
+        <blockquote className="hero-quote">
           &ldquo;What stands in the way becomes the way&rdquo;
-          <footer style={{ marginTop: '0.75rem', fontSize: '0.7rem', fontStyle: 'normal', letterSpacing: '0.1em', color: '#666', textTransform: 'uppercase' }}>
-            — Marcus Aurelius
-          </footer>
+          <footer>— Marcus Aurelius</footer>
         </blockquote>
       </section>
     </main>

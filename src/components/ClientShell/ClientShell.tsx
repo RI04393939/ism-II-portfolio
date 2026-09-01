@@ -2,16 +2,15 @@
 import { useEffect, useRef, useState } from 'react';
 import { usePathname } from 'next/navigation';
 import Navbar from '@/components/Navbar/Navbar';
+import CircuitBackground from '@/components/CircuitBackground/CircuitBackground';
 
 export default function ClientShell({ children }: { children: React.ReactNode }) {
   const [scrollProgress, setScrollProgress] = useState(0);
   const pathname = usePathname();
-  const bgCanvasRef = useRef<HTMLCanvasElement>(null);
   const cursorDotRef = useRef<HTMLDivElement>(null);
   const cursorRingRef = useRef<HTMLDivElement>(null);
   const mouseGlowRef = useRef<HTMLDivElement>(null);
   const preloaderRef = useRef<HTMLDivElement>(null);
-  const animFrameRef = useRef<number>(0);
 
   // Preloader
   useEffect(() => {
@@ -101,68 +100,6 @@ export default function ClientShell({ children }: { children: React.ReactNode })
     return () => clearTimeout(id);
   }, [pathname]);
 
-  // Background particle canvas
-  useEffect(() => {
-    const canvas = bgCanvasRef.current;
-    if (!canvas) return;
-    const ctx = canvas.getContext('2d');
-    if (!ctx) return;
-
-    let w = 0, h = 0;
-    const particles: { x: number; y: number; vx: number; vy: number }[] = [];
-    const N = 60;
-
-    const resize = () => {
-      w = canvas.width = window.innerWidth;
-      h = canvas.height = window.innerHeight;
-    };
-    resize();
-    window.addEventListener('resize', resize);
-
-    for (let i = 0; i < N; i++) {
-      particles.push({
-        x: Math.random() * w, y: Math.random() * h,
-        vx: (Math.random() - 0.5) * 0.3,
-        vy: (Math.random() - 0.5) * 0.3,
-      });
-    }
-
-    const draw = () => {
-      ctx.clearRect(0, 0, w, h);
-      particles.forEach(p => {
-        p.x += p.vx; p.y += p.vy;
-        if (p.x < 0 || p.x > w) p.vx *= -1;
-        if (p.y < 0 || p.y > h) p.vy *= -1;
-        ctx.beginPath();
-        ctx.arc(p.x, p.y, 1.2, 0, Math.PI * 2);
-        ctx.fillStyle = 'rgba(96,165,250,0.5)';
-        ctx.fill();
-      });
-      for (let i = 0; i < N; i++) {
-        for (let j = i + 1; j < N; j++) {
-          const dx = particles[i].x - particles[j].x;
-          const dy = particles[i].y - particles[j].y;
-          const dist = Math.sqrt(dx * dx + dy * dy);
-          if (dist < 120) {
-            ctx.beginPath();
-            ctx.moveTo(particles[i].x, particles[i].y);
-            ctx.lineTo(particles[j].x, particles[j].y);
-            ctx.strokeStyle = `rgba(96,165,250,${0.06 * (1 - dist / 120)})`;
-            ctx.lineWidth = 0.5;
-            ctx.stroke();
-          }
-        }
-      }
-      animFrameRef.current = requestAnimationFrame(draw);
-    };
-    draw();
-
-    return () => {
-      window.removeEventListener('resize', resize);
-      cancelAnimationFrame(animFrameRef.current);
-    };
-  }, []);
-
   return (
     <>
       {/* Preloader */}
@@ -182,7 +119,7 @@ export default function ClientShell({ children }: { children: React.ReactNode })
       <div className="scroll-progress-bar" style={{ width: `${scrollProgress}%` }} />
 
       {/* Background canvas */}
-      <canvas id="bgCanvas" className="bg-canvas" ref={bgCanvasRef} />
+      <CircuitBackground />
 
       {/* Navbar */}
       <Navbar />
