@@ -154,21 +154,34 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   opacity: 0;
 }
 
-/* Click aura, as it was before the redesign */
+/* Sparks thrown off while the cursor moves */
+.cursor-particle {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 99996;
+  border-radius: 50%;
+  background: var(--accent-text);
+  box-shadow: 0 0 4px rgba(96, 165, 250, 0.8);
+  pointer-events: none;
+  opacity: 0;
+}
+
+/* Click aura */
 .click-ripple {
   position: fixed;
   z-index: 99997;
   border: 1.5px solid var(--accent);
   border-radius: 50%;
-  box-shadow: 0 0 12px rgba(96, 165, 250, 0.4), inset 0 0 8px rgba(96, 165, 250, 0.1);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.35), inset 0 0 6px rgba(96, 165, 250, 0.1);
   pointer-events: none;
   transform: translate(-50%, -50%);
-  animation: click-ripple 750ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
+  animation: click-ripple 650ms cubic-bezier(0.22, 1, 0.36, 1) forwards;
 }
 
 @keyframes click-ripple {
   0%   { width: 0; height: 0; opacity: 0.9; }
-  100% { width: 220px; height: 220px; opacity: 0; }
+  100% { width: 120px; height: 120px; opacity: 0; }
 }
 
 /* ─── Page layout ──────────────────────────────────── */
