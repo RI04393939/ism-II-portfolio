@@ -1,5 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
+import Arrow from '@/components/Arrow/Arrow';
 import styles from './PhotoCard.module.css';
 
 type PhotoCardProps = {
@@ -33,10 +34,10 @@ export default function PhotoCard({
       <div className={styles.scrim} />
       <div className={styles.caption}>
         <p className={styles.label}>{label}</p>
-        <h2 className={styles.title}>
+        <h3 className={styles.title}>
           {title}
-          <span className={styles.arrow} aria-hidden="true">→</span>
-        </h2>
+          <Arrow />
+        </h3>
       </div>
     </Link>
   );

@@ -1,44 +1,34 @@
-/* Image-first card: the picture is the card. Modelled on COREWEBSITE's
-   PhotoCard, rebuilt without Tailwind/framer-motion to match this site. */
+/* Image-first card: the picture is the card. 1200 x 750 source images. */
 
 .card {
   position: relative;
   display: block;
   overflow: hidden;
-  border-radius: 10px;
-  border: 1px solid var(--card-border);
-  background: var(--card-bg);
-  /* 1200 x 750 source images */
   aspect-ratio: 16 / 10;
-  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 10px;
+  background: #13161c;
   transition:
-    transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1),
-    box-shadow 0.4s ease,
-    border-color 0.4s ease;
+    transform 320ms var(--ease-out),
+    box-shadow 320ms var(--ease-out),
+    border-color 320ms var(--ease-out);
 }
 
 .card:hover,
 .card:focus-visible {
-  transform: translateY(-6px);
-  border-color: rgba(96, 165, 250, 0.45);
-  box-shadow:
-    0 18px 44px rgba(0, 0, 0, 0.55),
-    0 0 26px rgba(96, 165, 250, 0.16);
-}
-
-.card:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 3px;
+  transform: translateY(-3px);
+  border-color: rgba(96, 165, 250, 0.4);
+  box-shadow: 0 16px 32px -14px rgba(0, 0, 0, 0.75);
 }
 
 .image {
   object-fit: cover;
-  transition: transform 0.55s cubic-bezier(0.2, 0.8, 0.2, 1);
+  transition: transform 600ms var(--ease-out);
 }
 
 .card:hover .image,
 .card:focus-visible .image {
-  transform: scale(1.045);
+  transform: scale(1.03);
 }
 
 /* Dark scrim so overlaid text stays readable on any photo */
@@ -47,10 +37,9 @@
   inset: 0;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.88) 0%,
-    rgba(0, 0, 0, 0.55) 32%,
-    rgba(0, 0, 0, 0.12) 62%,
-    rgba(0, 0, 0, 0) 100%
+    rgba(8, 10, 14, 0.9) 0%,
+    rgba(8, 10, 14, 0.55) 34%,
+    rgba(8, 10, 14, 0) 70%
   );
 }
 
@@ -59,53 +48,47 @@
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 1.3rem 1.4rem;
+  padding: 1.2rem 1.3rem;
 }
 
 .label {
-  margin: 0 0 0.5rem;
-  font-size: 0.62rem;
-  letter-spacing: 0.16em;
+  margin-bottom: 0.4rem;
+  font-family: var(--font-mono), ui-monospace, monospace;
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  color: var(--accent);
+  color: var(--accent-text);
 }
 
 .title {
-  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1rem;
-  font-weight: 600;
-  line-height: 1.35;
-  letter-spacing: -0.01em;
   color: #fff;
 }
 
-.arrow {
-  display: inline-block;
-  margin-left: 0.4rem;
+.title svg {
+  flex-shrink: 0;
+  color: var(--accent-text);
   opacity: 0;
   transform: translateX(-4px);
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  color: var(--accent);
+  transition: opacity 240ms var(--ease-out), transform 240ms var(--ease-out);
 }
 
-.card:hover .arrow,
-.card:focus-visible .arrow {
+.card:hover .title svg,
+.card:focus-visible .title svg {
   opacity: 1;
-  transform: translateX(0);
+  transform: none;
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .card,
-  .image,
-  .arrow {
-    transition: none;
-  }
   .card:hover,
-  .card:focus-visible {
-    transform: none;
-  }
+  .card:focus-visible,
   .card:hover .image,
-  .card:focus-visible .image {
+  .card:focus-visible .image,
+  .card:hover .title svg,
+  .card:focus-visible .title svg {
     transform: none;
   }
 }

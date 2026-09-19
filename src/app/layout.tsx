@@ -1,6 +1,22 @@
 import type { Metadata } from 'next';
+import localFont from 'next/font/local';
 import './globals.css';
-import ClientShell from '@/components/ClientShell/ClientShell';
+import Navbar from '@/components/Navbar/Navbar';
+import CircuitBackground from '@/components/CircuitBackground/CircuitBackground';
+
+const sans = localFont({
+  src: './fonts/GeistVF.woff',
+  variable: '--font-sans',
+  weight: '100 900',
+  display: 'swap',
+});
+
+const mono = localFont({
+  src: './fonts/GeistMonoVF.woff',
+  variable: '--font-mono',
+  weight: '100 900',
+  display: 'swap',
+});
 
 export const metadata: Metadata = {
   title: 'Rithvik Inampudi — Portfolio',
@@ -9,9 +25,11 @@ export const metadata: Metadata = {
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
+    <html lang="en" className={`${sans.variable} ${mono.variable}`}>
       <body>
-        <ClientShell>{children}</ClientShell>
+        <CircuitBackground />
+        <Navbar />
+        {children}
       </body>
     </html>
   );

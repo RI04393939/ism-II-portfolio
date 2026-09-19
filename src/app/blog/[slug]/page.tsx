@@ -1,6 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { notFound } from 'next/navigation';
+import Arrow from '@/components/Arrow/Arrow';
 import { blogPosts } from '@/data/blog';
 
 export const dynamicParams = false;
@@ -14,29 +15,23 @@ export default function BlogPostPage({ params }: { params: { slug: string } }) {
   if (!post) notFound();
 
   return (
-    <main className="page-container">
-      <Link
-        href="/blog"
-        style={{ display: 'inline-block', marginBottom: '1.5rem', fontSize: '0.65rem', letterSpacing: '0.12em', textTransform: 'uppercase', color: 'var(--accent)' }}
-      >
-        ← Back to Blog
+    <main className="page detail">
+      <Link href="/blog" className="back-link">
+        <Arrow dir="left" />
+        Back to Blog
       </Link>
 
-      <div className="reveal" style={{ position: 'relative', width: '100%', aspectRatio: '16 / 10', borderRadius: '10px', overflow: 'hidden', border: '1px solid var(--card-border)', marginBottom: '2rem' }}>
-        <Image src={post.image} alt={post.title} fill priority sizes="(min-width: 900px) 900px, 100vw" style={{ objectFit: 'cover' }} />
+      <p className="meta">{post.date}</p>
+      <h1 className="page-title">{post.title}</h1>
+
+      <div className="detail-figure">
+        <Image src={post.image} alt={post.title} fill priority sizes="(min-width: 820px) 820px, 100vw" style={{ objectFit: 'cover' }} />
       </div>
 
-      <p className="page-subheading reveal">{post.date}</p>
-      <h1 className="page-heading reveal" style={{ marginBottom: '1.5rem' }}>{post.title}</h1>
-
-      <div className="content-card reveal">
-        <p style={{ color: '#aaa', lineHeight: 1.8, fontSize: '0.9rem', marginBottom: post.body.length ? '1.5rem' : 0 }}>
-          {post.summary}
-        </p>
+      <p className="lead">{post.summary}</p>
+      <div className="prose">
         {post.body.map((para, i) => (
-          <p key={i} style={{ color: '#888', lineHeight: 1.8, fontSize: '0.85rem', marginBottom: i === post.body.length - 1 ? 0 : '1rem' }}>
-            {para}
-          </p>
+          <p key={i}>{para}</p>
         ))}
       </div>
     </main>

@@ -1,54 +1,68 @@
 'use client';
-import { useState } from 'react';
+
+import { useEffect, useState } from 'react';
 import Link from 'next/link';
 import { usePathname } from 'next/navigation';
 import styles from './Navbar.module.css';
 
 const routes = [
-  { label: 'HOME', href: '/' },
-  { label: 'ABOUT ME', href: '/about-me' },
-  { label: 'ABOUT ISM', href: '/about-ism' },
-  { label: 'MENTOR BIO', href: '/mentor-bio' },
-  { label: 'RESEARCH', href: '/research' },
-  { label: 'BLOG', href: '/blog' },
-  { label: 'PROJECTS', href: '/projects' },
+  { label: 'Home', href: '/' },
+  { label: 'About Me', href: '/about-me' },
+  { label: 'About ISM', href: '/about-ism' },
+  { label: 'Mentor Bio', href: '/mentor-bio' },
+  { label: 'Research', href: '/research' },
+  { label: 'Blog', href: '/blog' },
+  { label: 'Projects', href: '/projects' },
 ];
 
 export default function Navbar() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [open, setOpen] = useState(false);
   const pathname = usePathname();
 
-  const isActive = (href: string) => {
-    if (href === '/') return pathname === '/' || pathname === '';
-    return pathname.startsWith(href);
-  };
+  const isActive = (href: string) =>
+    href === '/' ? pathname === '/' : pathname.startsWith(href);
+
+  // Close the mobile menu with Escape.
+  useEffect(() => {
+    if (!open) return;
+    const onKey = (e: KeyboardEvent) => e.key === 'Escape' && setOpen(false);
+    document.addEventListener('keydown', onKey);
+    return () => document.removeEventListener('keydown', onKey);
+  }, [open]);
 
   return (
-    <div className={styles.navBar}>
-      <div className={styles.topBar}>
-        <Link href="/">
-          <h3 className={styles.nameHeader}>Rithvik</h3>
-        </Link>
+    <header className={styles.nav}>
+      <div className={styles.top}>
+        <Link href="/" className={styles.brand}>Rithvik</Link>
         <button
-          className={`${styles.hamburger} ${isMenuOpen ? styles.open : ''}`}
-          onClick={() => setIsMenuOpen(o => !o)}
-          aria-label="Toggle menu"
+          type="button"
+          className={styles.toggle}
+          aria-expanded={open}
+          aria-controls="site-nav"
+          aria-label={open ? 'Close menu' : 'Open menu'}
+          onClick={() => setOpen((o) => !o)}
         >
-          <span /><span /><span />
+          <span />
+          <span />
         </button>
       </div>
-      <nav className={`${styles.navHeader} ${isMenuOpen ? styles.open : ''}`}>
-        {routes.map((route, i) => (
-          <div key={route.href}>
-            <Link href={route.href} onClick={() => setIsMenuOpen(false)}>
-              <h3 className={`${styles.navItem} ${isActive(route.href) ? styles.active : ''}`}>
-                <span className={styles.navNumber}>{String(i + 1).padStart(2, '0')}</span>
-                {route.label}
-              </h3>
+
+      <nav id="site-nav" aria-label="Main" className={`${styles.links} ${open ? styles.open : ''}`}>
+        {routes.map((route) => {
+          const active = isActive(route.href);
+          return (
+            <Link
+              key={route.href}
+              href={route.href}
+              className={`${styles.link} ${active ? styles.active : ''}`}
+              aria-current={active ? 'page' : undefined}
+              onClick={() => setOpen(false)}
+            >
+              {route.label}
             </Link>
-          </div>
-        ))}
+          );
+        })}
       </nav>
-    </div>
+    </header>
   );
 }
