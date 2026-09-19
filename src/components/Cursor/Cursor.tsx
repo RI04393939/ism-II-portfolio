@@ -61,12 +61,24 @@ export default function Cursor() {
 
     const onLeave = () => root.classList.remove('is-visible');
 
+    // Click aura: a ring that expands out from the pointer and fades.
+    const onClick = (e: MouseEvent) => {
+      const ripple = document.createElement('div');
+      ripple.className = 'click-ripple';
+      ripple.style.left = `${e.clientX}px`;
+      ripple.style.top = `${e.clientY}px`;
+      ripple.addEventListener('animationend', () => ripple.remove(), { once: true });
+      root.appendChild(ripple);
+    };
+
     document.addEventListener('pointermove', onMove, { passive: true });
+    document.addEventListener('click', onClick);
     document.documentElement.addEventListener('pointerleave', onLeave);
 
     return () => {
       clearTimeout(trailTimer);
       document.removeEventListener('pointermove', onMove);
+      document.removeEventListener('click', onClick);
       document.documentElement.removeEventListener('pointerleave', onLeave);
       document.documentElement.classList.remove('has-cursor');
     };
