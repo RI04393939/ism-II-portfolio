@@ -2,17 +2,17 @@ import PhotoCard from '@/components/PhotoCard/PhotoCard';
 import { researchAssessments } from '@/data/research';
 
 const interviews = [
-  { date: 'January 14, 2026', subject: 'Interview with Subramanian Sankaran — Introduction to Deep Learning Research' },
-  { date: 'February 11, 2026', subject: 'Interview with Subramanian Sankaran — Neural Network Architectures & Transformer Models' },
-  { date: 'March 4, 2026', subject: 'Interview with Subramanian Sankaran — Large Language Models & Fine-Tuning Strategies' },
+  { date: 'January 14, 2026', subject: 'Interview with Subramanian Sankaran: Introduction to Deep Learning Research' },
+  { date: 'February 11, 2026', subject: 'Interview with Subramanian Sankaran: Neural Network Architectures & Transformer Models' },
+  { date: 'March 4, 2026', subject: 'Interview with Subramanian Sankaran: Large Language Models & Fine-Tuning Strategies' },
 ];
 
 const mentorVisits = [
-  { date: 'January 28, 2026', subject: 'Mentor Visit #1 — Workspace Tour & Research Goal Setting' },
-  { date: 'February 25, 2026', subject: 'Mentor Visit #2 — Hands-On Session: PyTorch & Model Training Pipelines' },
-  { date: 'March 18, 2026', subject: 'Mentor Visit #3 — Literature Review Discussion & Paper Deep-Dive' },
-  { date: 'April 15, 2026', subject: 'Mentor Visit #4 — Original Work Checkpoint & Experiment Design' },
-  { date: 'May 20, 2026', subject: 'Mentor Visit #5 — Final Project Review & Presentation Feedback' },
+  { date: 'January 28, 2026', subject: 'Mentor Visit #1: Workspace Tour & Research Goal Setting' },
+  { date: 'February 25, 2026', subject: 'Mentor Visit #2: Hands-On Session with PyTorch & Model Training Pipelines' },
+  { date: 'March 18, 2026', subject: 'Mentor Visit #3: Literature Review Discussion & Paper Deep-Dive' },
+  { date: 'April 15, 2026', subject: 'Mentor Visit #4: Original Work Checkpoint & Experiment Design' },
+  { date: 'May 20, 2026', subject: 'Mentor Visit #5: Final Project Review & Presentation Feedback' },
 ];
 
 function Rows({ items }: { items: { date: string; subject: string }[] }) {

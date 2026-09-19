@@ -1,5 +1,5 @@
 export type ResearchAssessment = {
-  /** URL segment — lowercase, dashes only. Becomes /research/<slug>/ */
+  /** URL segment: lowercase, dashes only. Becomes /research/<slug>/ */
   slug: string;
   title: string;
   /** Shown on the card and the detail header, e.g. 'Assessment 1' */
@@ -11,7 +11,7 @@ export type ResearchAssessment = {
   summary: string;
   /** Each string is one paragraph. */
   body: string[];
-  /** Optional file under /public — adds a download button to the detail page. */
+  /** Optional file under /public. Adds a download button to the detail page. */
   file?: string;
 };
 
@@ -36,7 +36,7 @@ export type ResearchAssessment = {
 /**
  * NOTE: this array must never be empty. The site is a static export, and
  * Next refuses to build /research/[slug] with no entries to generate. Keep at
- * least one item here — overwrite the starter below rather than deleting it.
+ * least one item here. Overwrite the starter below rather than deleting it.
  */
 export const researchAssessments: ResearchAssessment[] = [
   {
@@ -45,7 +45,7 @@ export const researchAssessments: ResearchAssessment[] = [
     label: 'Template',
     date: 'August 31, 2026',
     image: '/cards/placeholder.svg',
-    summary: 'A starter entry — replace this with your first assessment.',
+    summary: 'A starter entry. Replace this with your first assessment.',
     body: [
       'This entry is a template. Open src/data/research.ts and edit it, or add new assessments above it so the newest appears first.',
       'Every assessment needs a slug, title, label, date, image, summary, and body. Add an optional file path to show a download button. Put card images in /public/cards at 1200 x 750.',

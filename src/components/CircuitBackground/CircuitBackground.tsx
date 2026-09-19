@@ -250,7 +250,7 @@ export default function CircuitBackground() {
           ctx.stroke();
         }
 
-        // Head glow — a radial fill is much cheaper than shadowBlur here.
+        // Head glow: a radial fill is much cheaper than shadowBlur here.
         const g = ctx.createRadialGradient(head.x, head.y, 0, head.x, head.y, 9);
         g.addColorStop(0, 'rgba(191,219,254,0.55)');
         g.addColorStop(1, 'rgba(96,165,250,0)');

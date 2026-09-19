@@ -24,8 +24,8 @@ export default function AboutMe() {
             <div className="prose">
               <p>
                 Rithvik Inampudi is a student in the Independent Study and Mentorship program, where his
-                topic of study is electronics. His interest sits where hardware meets intelligence — the
-                circuits, boards, and chips that machine learning models actually run on — and in how a
+                topic of study is electronics. His interest sits where hardware meets intelligence: the
+                circuits, boards, and chips that machine learning models actually run on, and how a
                 firmer grasp of that layer changes what those models are capable of.
               </p>
               <p>
@@ -35,7 +35,7 @@ export default function AboutMe() {
                 deepening that work through research, mentorship, and an original project.
               </p>
               <p>
-                He takes his approach from Marcus Aurelius — &ldquo;What stands in the way becomes the
+                He takes his approach from Marcus Aurelius: &ldquo;What stands in the way becomes the
                 way.&rdquo; An obstacle in a design or a model is treated as the substance of the work
                 rather than a detour around it. The long-term goal is to build intelligent systems that
                 make a practical, measurable difference in people&apos;s lives.

@@ -15,7 +15,7 @@ export default function Home() {
         <blockquote>
           <p><mark>&ldquo;What stands in the way becomes the way&rdquo;</mark></p>
         </blockquote>
-        <figcaption>— Marcus Aurelius</figcaption>
+        <figcaption>Marcus Aurelius</figcaption>
       </figure>
     </main>
   );

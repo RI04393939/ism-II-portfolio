@@ -1,5 +1,5 @@
 export type BlogPost = {
-  /** URL segment — lowercase, dashes only. Becomes /blog/<slug>/ */
+  /** URL segment: lowercase, dashes only. Becomes /blog/<slug>/ */
   slug: string;
   title: string;
   /** Shown on the card and the post header, e.g. 'April 18, 2026' */
@@ -31,7 +31,7 @@ export type BlogPost = {
 /**
  * NOTE: this array must never be empty. The site is a static export, and
  * Next refuses to build /blog/[slug] with no entries to generate. Keep at
- * least one post here — overwrite the starter below rather than deleting it.
+ * least one post here. Overwrite the starter below rather than deleting it.
  */
 export const blogPosts: BlogPost[] = [
   {
@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     title: 'Getting Started',
     date: 'August 31, 2026',
     image: '/cards/placeholder.svg',
-    summary: 'A starter entry — replace this with your first real post.',
+    summary: 'A starter entry. Replace this with your first real post.',
     body: [
       'This post is a template. Open src/data/blog.ts and edit it, or add new posts above it so the newest appears first.',
       'Every post needs a slug, title, date, image, summary, and body. Put card images in /public/cards at 1200 x 750.',

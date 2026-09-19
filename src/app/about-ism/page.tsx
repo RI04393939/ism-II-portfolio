@@ -21,7 +21,7 @@ export default function AboutISM() {
         <h2 className="section-title">About the Program</h2>
         <div className="prose">
           <p>
-            ISM — Independent Study Mentorship — is a year-long, research-based program that connects
+            ISM (Independent Study Mentorship) is a year-long, research-based program that connects
             high school students with professionals in their field of interest. Students develop
             real-world skills through primary and secondary research, mentorship, and an original work
             project, culminating in a final product that demonstrates mastery of their chosen topic.
@@ -29,7 +29,7 @@ export default function AboutISM() {
           <p>
             The program emphasizes professional development, independent thinking, and the application
             of academic knowledge to real-world problems. Students engage directly with industry
-            mentors, conduct original research, and present their findings to panels of professionals —
+            mentors, conduct original research, and present their findings to panels of professionals,
             building the skills needed for college and career success.
           </p>
         </div>

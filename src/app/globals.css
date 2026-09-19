@@ -97,6 +97,63 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   opacity: 0.4;
 }
 
+/* ─── Custom cursor (mouse only; Cursor.tsx adds .has-cursor) ─── */
+.has-cursor,
+.has-cursor * { cursor: none !important; }
+
+.cursor-dot,
+.cursor-ring,
+.cursor-trail {
+  position: fixed;
+  top: 0;
+  left: 0;
+  border-radius: 50%;
+  pointer-events: none;
+}
+
+.cursor-dot,
+.cursor-ring {
+  opacity: 0;
+  transition: opacity 200ms ease;
+}
+
+.cursor.is-visible .cursor-dot,
+.cursor.is-visible .cursor-ring { opacity: 1; }
+
+.cursor-dot {
+  z-index: 99999;
+  width: 6px;
+  height: 6px;
+  background: var(--accent);
+  box-shadow: 0 0 8px rgba(96, 165, 250, 0.8);
+}
+
+.cursor-ring {
+  z-index: 99998;
+  width: 28px;
+  height: 28px;
+  border: 1.5px solid rgba(96, 165, 250, 0.5);
+  transition:
+    opacity 200ms ease,
+    width 220ms var(--ease-out),
+    height 220ms var(--ease-out),
+    border-color 220ms var(--ease-out);
+}
+
+.cursor-ring.is-hover {
+  width: 44px;
+  height: 44px;
+  border-color: rgba(147, 197, 253, 0.85);
+}
+
+.cursor-trail {
+  z-index: 99996;
+  width: 4px;
+  height: 4px;
+  background: var(--accent);
+  opacity: 0;
+}
+
 /* ─── Page layout ──────────────────────────────────── */
 .page {
   position: relative;
