@@ -4,7 +4,8 @@ import Arrow from '@/components/Arrow/Arrow';
 import styles from './PhotoCard.module.css';
 
 type PhotoCardProps = {
-  href: string;
+  /** Omit for a placeholder card that does not link anywhere yet. */
+  href?: string;
   src: string;
   alt: string;
   label: string;
@@ -21,8 +22,8 @@ export default function PhotoCard({
   title,
   priority = false,
 }: PhotoCardProps) {
-  return (
-    <Link href={href} className={styles.card}>
+  const inner = (
+    <>
       <Image
         src={src}
         alt={alt}
@@ -36,9 +37,19 @@ export default function PhotoCard({
         <p className={styles.label}>{label}</p>
         <h3 className={styles.title}>
           {title}
-          <Arrow />
+          {href && <Arrow />}
         </h3>
       </div>
+    </>
+  );
+
+  if (!href) {
+    return <div className={`${styles.card} ${styles.static}`}>{inner}</div>;
+  }
+
+  return (
+    <Link href={href} className={styles.card}>
+      {inner}
     </Link>
   );
 }

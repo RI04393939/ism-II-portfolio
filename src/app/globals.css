@@ -259,33 +259,6 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   font-variant-numeric: tabular-nums;
 }
 
-/* ─── Status LED ("Coming soon") ───────────────────── */
-.status {
-  display: inline-flex;
-  align-items: center;
-  gap: 0.65rem;
-  margin-bottom: 0.75rem;
-  font-family: var(--font-mono), ui-monospace, monospace;
-  font-size: 0.78rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: var(--accent-text);
-}
-
-.status::before {
-  content: '';
-  width: 7px;
-  height: 7px;
-  border-radius: 50%;
-  background: var(--accent);
-  animation: led-pulse 2.4s ease-in-out infinite;
-}
-
-@keyframes led-pulse {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0.3; }
-}
-
 /* ─── Row list (interviews, visits) ────────────────── */
 .rows {
   list-style: none;
@@ -430,6 +403,12 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: poi
   padding: 1.1rem 1.4rem;
   background: #fff;
   border-radius: 10px;
+}
+
+/* A lone card should not stretch the full column width */
+.card-single {
+  max-width: 420px;
+  margin-bottom: 1.5rem;
 }
 
 /* ─── Card grid ────────────────────────────────────── */

@@ -21,6 +21,15 @@
   box-shadow: 0 16px 32px -14px rgba(0, 0, 0, 0.75);
 }
 
+/* Placeholder card: nothing to click yet, so it does not react to hover */
+.static:hover {
+  transform: none;
+  border-color: var(--line);
+  box-shadow: none;
+}
+
+.static:hover .image { transform: none; }
+
 .image {
   object-fit: cover;
   transition: transform 600ms var(--ease-out);
